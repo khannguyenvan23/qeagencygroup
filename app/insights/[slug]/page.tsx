@@ -21,8 +21,17 @@ export default async function InsightDetailPage({
       title={post.title}
       intro={post.excerpt}
       cards={[
-        { title: "Key idea", text: "Bài viết sẽ được phát triển thành nội dung chuyên sâu hoặc kết nối CMS ở phase sau." },
-        { href: "/insights", title: "Xem thêm insights", text: "Quay lại thư viện bài viết của QEAgency.", meta: "Insights" },
+        {
+          title: "Ý tưởng chính",
+          text: "Bài viết sẽ được phát triển thành nội dung chuyên sâu hoặc kết nối CMS ở phase sau.",
+          meta: `${post.date} · ${post.readTime}`,
+        },
+        {
+          href: "/insights",
+          title: "Xem thêm kiến thức",
+          text: "Quay lại thư viện kiến thức của QEAgency.",
+          meta: "Kiến thức",
+        },
       ]}
     />
   );

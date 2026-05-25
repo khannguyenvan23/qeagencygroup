@@ -4,48 +4,48 @@ import { useState } from "react";
 
 const funnelMetrics = [
   {
-    label: "Strategy",
+    label: "Chiến lược",
     value: "100%",
     detail: "Roadmap hoạch định chính xác",
   },
   {
-    label: "Assets",
+    label: "Tài sản số",
     value: ">90",
     detail: "Core Web Vitals cho Web/App",
   },
   {
     label: "Traffic",
     value: "+150%",
-    detail: "Target Traffic đúng tệp",
+    detail: "Lưu lượng đúng tệp mục tiêu",
   },
   {
-    label: "Conversion",
+    label: "Chuyển đổi",
     value: "+35%",
-    detail: "Conversion Rate toàn phễu",
+    detail: "Tỷ lệ chuyển đổi toàn phễu",
   },
   {
     label: "ROI",
     value: "X3-X5",
-    detail: "ROI cam kết theo dòng tiền ads",
+    detail: "Hiệu quả dòng tiền quảng cáo",
   },
 ];
 
 const services = [
-  "Strategy",
-  "Content",
-  "Design",
+  "Chiến lược",
+  "Nội dung",
+  "Thiết kế",
   "Video",
-  "Development",
-  "Advertising",
+  "Công nghệ",
+  "Quảng cáo",
   "KOL/KOC",
 ];
 
-const process = ["Audit", "Assets", "Launch", "Measure", "Optimize"];
+const process = ["Đánh giá", "Xây dựng", "Triển khai", "Đo lường", "Tối ưu"];
 
 const tickerItems = [
-  "CASE STUDY: +45% Tỷ lệ chuyển đổi Lead cho ngành BĐS",
-  "LATEST WORK: E-commerce Next.js đạt 98 điểm PageSpeed",
-  "PAID ADS: CAC giảm 30% cho đối tác F&B",
+  "CASE STUDY: +45% tỷ lệ chuyển đổi lead cho ngành BĐS",
+  "DỰ ÁN MỚI: E-commerce Next.js đạt 98 điểm PageSpeed",
+  "QUẢNG CÁO: CAC giảm 30% cho đối tác F&B",
 ];
 
 export function HeroFunnel() {
@@ -54,11 +54,11 @@ export function HeroFunnel() {
   return (
     <div
       className="hero-panel funnel-panel"
-      aria-label="Live funnel metrics"
+      aria-label="Chỉ số phễu tăng trưởng"
       data-reveal="right"
     >
       <div className="panel-top">
-        <span>Live Funnel Metrics</span>
+        <span>Chỉ số phễu tăng trưởng</span>
         <strong>Realtime</strong>
       </div>
 
@@ -80,7 +80,7 @@ export function HeroFunnel() {
         >
           <strong>07</strong>
           <span>Nhóm năng lực cốt lõi</span>
-          <small>Hợp nhất Marketing & Công nghệ.</small>
+          <small>Hợp nhất marketing và công nghệ.</small>
         </button>
         <button
           className={view === "process" ? "is-active" : ""}
@@ -89,7 +89,7 @@ export function HeroFunnel() {
         >
           <strong>5</strong>
           <span>Bước vận hành tăng trưởng</span>
-          <small>Chuẩn hóa từ Đo lường đến Tối ưu.</small>
+          <small>Chuẩn hóa từ đo lường đến tối ưu.</small>
         </button>
       </div>
 
@@ -101,7 +101,7 @@ export function HeroFunnel() {
         ))}
       </div>
 
-      <div className="ticker-card" aria-label="Live case study ticker">
+      <div className="ticker-card" aria-label="Case study ticker">
         <span className="pulse" />
         <div className="ticker-track">
           {[...tickerItems, ...tickerItems].map((item, index) => (

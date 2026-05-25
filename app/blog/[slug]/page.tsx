@@ -23,17 +23,19 @@ export default async function BlogDetailPage({
       cards={[
         {
           title: "Tóm tắt",
-          text: "Bài viết này là khung nội dung ban đầu. Ở phase sau có thể nối CMS hoặc MDX để biên tập bài dài.",
+          text: "Bài viết này là khung nội dung ban đầu. Phase sau có thể nối CMS hoặc MDX để biên tập bài dài.",
+          meta: `${post.date} · ${post.readTime}`,
         },
         {
           title: "Ứng dụng thực tế",
           text: "Tập trung vào cách doanh nghiệp có thể đo lường, tối ưu và ra quyết định dựa trên dữ liệu.",
+          meta: post.author,
         },
         {
           href: "/blog",
-          title: "Quay lại Blog",
-          text: "Xem thêm các bài viết khác từ QEAgency.",
-          meta: "Blog",
+          title: "Quay lại Bài viết",
+          text: "Xem thêm các bài viết chuyên môn khác từ QEAgency.",
+          meta: "Thư viện bài viết",
         },
       ]}
     />

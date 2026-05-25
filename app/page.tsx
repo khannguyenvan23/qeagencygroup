@@ -13,41 +13,41 @@ const painPoints = [
     pain: "Tôi cần nhiều khách hàng tiềm năng hơn",
     solution:
       "Thiết kế kiến trúc phễu thu thập Lead, tối ưu hóa trang đích và triển khai chiến dịch quảng cáo chuyển đổi đa kênh.",
-    services: "Digital & Marketing Strategy + Advertising & Conversion",
+    services: "Chiến lược tăng trưởng + Quảng cáo chuyển đổi",
   },
   {
     id: "02",
     pain: "Website / Landing page chuyển đổi kém",
     solution:
       "Tái cấu trúc trải nghiệm UX/UI, tối ưu tốc độ tải trang, viết lại nội dung định hướng hành động và cấu trúc lại các điểm chạm đăng ký.",
-    services: "IT Development + Design Services",
+    services: "Phát triển nền tảng số + Thiết kế UX/UI",
   },
   {
     id: "03",
     pain: "Tôi cần chạy quảng cáo hiệu quả hơn",
     solution:
       "Thiết lập hệ thống đo lường realtime, liên tục A/B testing nội dung và hình ảnh để tối ưu chi phí thu mua khách hàng.",
-    services: "Advertising & Conversion + Video Production",
+    services: "Quảng cáo hiệu suất + Sản xuất video",
   },
   {
     id: "04",
     pain: "Tôi cần xây dựng thương hiệu chuyên nghiệp",
     solution:
       "Định hình bản sắc thương hiệu số, chuẩn hóa nhận diện trên mọi nền tảng và sản xuất chuỗi nội dung/video có chiều sâu.",
-    services: "Design Services + Content Services",
+    services: "Thiết kế thương hiệu + Nội dung chuyển đổi",
   },
   {
     id: "05",
     pain: "Tôi cần KOL/KOC để lan tỏa nhanh hơn",
     solution:
       "Chọn lọc KOL/KOC dựa trên dữ liệu tệp khách hàng, quản lý nội dung chuẩn phễu và khuếch đại bằng quảng cáo hiệu suất.",
-    services: "Booking KOL/KOC + Content Services",
+    services: "KOL/KOC + Nội dung chuyển đổi",
   },
 ];
 
 const services = [
   {
-    title: "Digital & Marketing Strategy",
+    title: "Chiến lược tăng trưởng số",
     label: "Bộ não chiến lược",
     items: [
       "Nghiên cứu thị trường & đối thủ",
@@ -56,7 +56,7 @@ const services = [
     ],
   },
   {
-    title: "Content Services",
+    title: "Nội dung chuyển đổi",
     label: "Nội dung chuyển đổi",
     items: [
       "Website & landing page copy",
@@ -66,7 +66,7 @@ const services = [
     ],
   },
   {
-    title: "Design Services",
+    title: "Thiết kế thương hiệu số",
     label: "Thiết kế định hướng kết quả",
     items: [
       "Thiết kế giao diện website/app",
@@ -76,7 +76,7 @@ const services = [
     ],
   },
   {
-    title: "Video Production",
+    title: "Sản xuất video",
     label: "Công cụ hỗ trợ acquisition",
     items: [
       "Video ngắn TikTok/Reels",
@@ -86,7 +86,7 @@ const services = [
     ],
   },
   {
-    title: "IT Development",
+    title: "Phát triển nền tảng số",
     label: "Nền tảng số thực chiến",
     items: [
       "Website & landing page tốc độ cao",
@@ -95,7 +95,7 @@ const services = [
     ],
   },
   {
-    title: "Advertising & Conversion",
+    title: "Quảng cáo hiệu suất",
     label: "Quảng cáo hiệu suất",
     items: [
       "Kế hoạch và tối ưu ngân sách đa kênh",
@@ -117,27 +117,27 @@ const services = [
 const process = [
   {
     step: "01",
-    title: "Audit & Strategy",
+    title: "Đánh giá & chiến lược",
     text: "Khảo sát hệ thống hiện tại, tìm điểm nghẽn của phễu, định vị thị trường và thiết lập KPI.",
   },
   {
     step: "02",
-    title: "Build Assets",
+    title: "Xây dựng tài sản",
     text: "Thiết kế UX/UI và lập trình web/landing page với tracking sâu từ dòng code đầu tiên.",
   },
   {
     step: "03",
-    title: "Launch Campaigns",
+    title: "Triển khai chiến dịch",
     text: "Kích hoạt nội dung chuyển đổi, video acquisition, paid ads và KOL/KOC để đưa traffic mục tiêu vào phễu.",
   },
   {
     step: "04",
-    title: "Track Performance",
+    title: "Đo lường hiệu suất",
     text: "Đo lường realtime để kiểm soát dòng tiền, lead quality và chi phí thu mua khách hàng.",
   },
   {
     step: "05",
-    title: "Optimize ROI",
+    title: "Tối ưu ROI",
     text: "A/B testing giao diện, nội dung và phân bổ ngân sách để tối đa hóa lợi nhuận thực tế.",
   },
 ];
@@ -210,7 +210,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-content" data-reveal="left">
-          <p className="eyebrow">Digital Growth Partner</p>
+          <p className="eyebrow">Đối tác tăng trưởng số</p>
           <h1>
             Tăng trưởng số không chỉ đến từ{" "}
             <span className="accent-text">quảng cáo.</span>
@@ -222,7 +222,7 @@ export default function Home() {
             quả kinh doanh thực tế, thay vì các chỉ số bề mặt.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href="#contact">
+            <a className="primary-button" href="/contact">
               Nhận tư vấn chiến lược phễu
             </a>
             <a className="secondary-button" href="#services">
@@ -234,14 +234,14 @@ export default function Home() {
         <HeroFunnel />
       </section>
 
-      <section className="logo-band" aria-label="Capabilities" data-reveal="up">
+      <section className="logo-band" aria-label="Năng lực" data-reveal="up">
         {[
-          "Strategy",
-          "Content",
-          "Design",
+          "Chiến lược",
+          "Nội dung",
+          "Thiết kế",
           "Video",
-          "Development",
-          "Advertising",
+          "Công nghệ",
+          "Quảng cáo",
           "KOL/KOC",
         ].map((item, index) => (
           <span
@@ -255,7 +255,7 @@ export default function Home() {
 
       <section className="section about-section" id="about">
         <div className="about-copy" data-reveal="left">
-          <p className="eyebrow">About QEAgency</p>
+          <p className="eyebrow">Về QEAgency</p>
           <h2>Đối tác tăng trưởng kết hợp chiến lược, sáng tạo và công nghệ.</h2>
           <p>
             QEAgency đồng hành cùng doanh nghiệp trong toàn bộ hành trình tăng
@@ -283,7 +283,7 @@ export default function Home() {
 
       <section className="section solutions-section" id="solutions">
         <div className="section-heading" data-reveal="up">
-          <p className="eyebrow">Pain points to solutions</p>
+          <p className="eyebrow">Từ vấn đề đến giải pháp</p>
           <h2>Chọn đúng vấn đề kinh doanh trước khi chọn kênh.</h2>
         </div>
         <PainTabs items={painPoints} />
@@ -291,7 +291,7 @@ export default function Home() {
 
       <section className="section" id="services">
         <div className="section-heading" data-reveal="up">
-          <p className="eyebrow">Core services</p>
+          <p className="eyebrow">Dịch vụ cốt lõi</p>
           <h2>Ma trận 7 nhóm dịch vụ cốt lõi phục vụ chuyển đổi.</h2>
         </div>
         <div className="services-grid">
@@ -316,7 +316,7 @@ export default function Home() {
 
       <section className="process-section" id="process">
         <div className="section-heading" data-reveal="up">
-          <p className="eyebrow">Growth process</p>
+          <p className="eyebrow">Quy trình tăng trưởng</p>
           <h2>Marketing không tách rời công nghệ.</h2>
         </div>
         <div className="timeline">
@@ -337,7 +337,7 @@ export default function Home() {
 
       <section className="work-section" id="work">
         <div className="section-heading" data-reveal="up">
-          <p className="eyebrow">Selected works</p>
+          <p className="eyebrow">Dự án tiêu biểu</p>
           <h2>Bằng chứng năng lực qua tư duy giải quyết vấn đề.</h2>
         </div>
         <div className="work-grid">
@@ -375,7 +375,7 @@ export default function Home() {
 
       <section className="section why-section">
         <div className="section-heading" data-reveal="up">
-          <p className="eyebrow">Why QEAgency</p>
+          <p className="eyebrow">Vì sao chọn QEAgency</p>
           <h2>Ba lý do giúp khách hàng chọn một đối tác hybrid.</h2>
         </div>
         <div className="reason-grid">
