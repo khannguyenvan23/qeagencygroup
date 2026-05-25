@@ -17,11 +17,11 @@ export function SiteHeader() {
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
           <Link href="/about">Về QEAgency</Link>
-          <Link className="has-menu" href="/#solutions">Giải pháp</Link>
-          <Link className="has-menu" href="/#services">Kiến thức</Link>
-          <Link href="/#work">Dự án</Link>
-          <Link className="has-menu" href="/#process">Academy</Link>
-          <Link href="/#services">Nghề nghiệp</Link>
+          <Link className="has-menu" href="/services">Dịch vụ</Link>
+          <Link className="has-menu" href="/insights">Insights</Link>
+          <Link href="/work">Dự án</Link>
+          <Link className="has-menu" href="/partners">Đối tác</Link>
+          <Link href="/careers">Nghề nghiệp</Link>
           <Link href="/contact">Liên hệ</Link>
         </nav>
         <div className="header-actions" aria-label="Header actions">
@@ -38,11 +38,11 @@ export function SiteHeader() {
           </summary>
           <nav aria-label="Mobile menu">
             <Link href="/about">Về QEAgency</Link>
-            <Link href="/#solutions">Giải pháp</Link>
-            <Link href="/#services">Kiến thức</Link>
-            <Link href="/#work">Dự án</Link>
-            <Link href="/#process">Academy</Link>
-            <Link href="/#services">Nghề nghiệp</Link>
+            <Link href="/services">Dịch vụ</Link>
+            <Link href="/insights">Insights</Link>
+            <Link href="/work">Dự án</Link>
+            <Link href="/partners">Đối tác</Link>
+            <Link href="/careers">Nghề nghiệp</Link>
             <Link href="/contact">Liên hệ</Link>
           </nav>
         </details>

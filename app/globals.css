@@ -1876,6 +1876,88 @@ h1 {
   cursor: pointer;
 }
 
+.corporate-page {
+  background: #f7f8f4;
+}
+
+.corporate-hero {
+  padding: clamp(64px, 8vw, 116px) clamp(20px, 6vw, 96px);
+  background:
+    linear-gradient(135deg, rgba(0, 70, 255, 0.12), transparent 42%),
+    #fff;
+}
+
+.corporate-hero h1 {
+  max-width: 980px;
+  margin-bottom: 20px;
+  font-size: clamp(46px, 7vw, 96px);
+  line-height: 0.96;
+}
+
+.corporate-hero > p:not(.eyebrow) {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.corporate-grid-section {
+  padding: clamp(52px, 7vw, 92px) clamp(20px, 6vw, 96px);
+}
+
+.corporate-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.corporate-card {
+  display: grid;
+  align-content: start;
+  min-height: 280px;
+  padding: 26px;
+  color: var(--foreground);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition:
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    transform 260ms var(--ease-out);
+}
+
+.corporate-card:hover {
+  border-color: rgba(0, 70, 255, 0.3);
+  box-shadow: 0 22px 50px rgba(17, 23, 19, 0.1);
+  transform: translateY(-5px);
+}
+
+.corporate-card span {
+  margin-bottom: 42px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.corporate-card h2 {
+  margin-bottom: 14px;
+  font-size: 26px;
+  line-height: 1.08;
+}
+
+.corporate-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.corporate-card strong {
+  margin-top: auto;
+  color: var(--accent);
+  font-size: 20px;
+}
+
 @keyframes backgroundDrift {
   from {
     opacity: 0.72;
@@ -2023,7 +2105,8 @@ h1 {
   }
 
   .contact-philosophy-grid,
-  .contact-service-grid {
+  .contact-service-grid,
+  .corporate-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -2166,7 +2249,8 @@ h1 {
 
   .contact-philosophy-grid,
   .contact-service-grid,
-  .contact-highlight {
+  .contact-highlight,
+  .corporate-card-grid {
     grid-template-columns: 1fr;
   }
 

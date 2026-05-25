@@ -1,9 +1,10 @@
-import type { CSSProperties } from "react";
+﻿import type { CSSProperties } from "react";
 import Image from "next/image";
 import logo from "../logo-01-main-transparent.png";
 import { HeroFunnel } from "./HeroFunnel";
 import { MotionLayer } from "./MotionLayer";
 import { PainTabs } from "./PainTabs";
+import { SiteHeader } from "./SiteHeader";
 
 const painPoints = [
   {
@@ -183,72 +184,7 @@ export default function Home() {
   return (
     <main>
       <MotionLayer />
-      <header className="site-header">
-        <div className="header-inner">
-          <a className="brand" href="#top" aria-label="QEAgency home">
-            <Image
-              src={logo}
-              alt="QEAgency"
-              className="brand-logo"
-              priority
-              style={{ width: 92, height: 92 }}
-            />
-          </a>
-          <nav className="nav-links" aria-label="Main navigation">
-            <a href="/about">Về QEAgency</a>
-            <a className="has-menu" href="#solutions">Giải pháp</a>
-            <a className="has-menu" href="#services">Kiến thức</a>
-            <a href="#work">Dự án</a>
-            <a className="has-menu" href="#process">Academy</a>
-            <a href="#services">Nghề nghiệp</a>
-            <a href="/contact">Liên hệ</a>
-          </nav>
-          <div className="header-actions" aria-label="Header actions">
-            <a className="search-link" href="#contact" aria-label="Tìm kiếm" />
-            <a className="language-link" href="#top" aria-label="English">
-              EN
-            </a>
-          </div>
-          <details className="mobile-menu">
-            <summary aria-label="Mở menu">
-              <span />
-              <span />
-              <span />
-            </summary>
-            <nav aria-label="Mobile menu">
-              <a href="/about">Về QEAgency</a>
-              <a href="#solutions">Giải pháp</a>
-              <a href="#services">Kiến thức</a>
-              <a href="#work">Dự án</a>
-              <a href="#process">Academy</a>
-              <a href="#services">Nghề nghiệp</a>
-              <a href="/contact">Liên hệ</a>
-            </nav>
-          </details>
-        </div>
-      </header>
-      <nav className="mobile-tab-bar" aria-label="Mobile navigation">
-        <a href="#top">
-          <span className="tab-icon">H</span>
-          <span>Home</span>
-        </a>
-        <a href="/about">
-          <span className="tab-icon">QE</span>
-          <span>Về</span>
-        </a>
-        <a href="#solutions">
-          <span className="tab-icon">GP</span>
-          <span>Giải pháp</span>
-        </a>
-        <a href="#services">
-          <span className="tab-icon">DV</span>
-          <span>Dịch vụ</span>
-        </a>
-        <a href="/contact">
-          <span className="tab-icon">LH</span>
-          <span>Liên hệ</span>
-        </a>
-      </nav>
+      <SiteHeader />
 
       <section className="hero" id="top">
         <div className="hero-content" data-reveal="left">
@@ -502,3 +438,4 @@ export default function Home() {
     </main>
   );
 }
+
