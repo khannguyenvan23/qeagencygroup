@@ -1129,6 +1129,27 @@ h1 {
   background: #f7f8f4;
 }
 
+.expert-articles-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.8fr);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.expert-articles-heading h2 {
+  margin: 0;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 1;
+}
+
+.expert-articles-heading p {
+  max-width: 640px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .expert-article-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1197,7 +1218,7 @@ h1 {
 
 .partner-heading {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.8fr);
   gap: 28px;
   align-items: end;
   margin-bottom: 34px;
@@ -1205,7 +1226,7 @@ h1 {
 
 .partner-heading h2 {
   margin: 0;
-  font-size: clamp(34px, 5vw, 68px);
+  font-size: clamp(48px, 7vw, 96px);
   line-height: 1;
 }
 
@@ -2211,6 +2232,7 @@ h1 {
   .hero,
   .section-heading,
   .partner-heading,
+  .expert-articles-heading,
   .about-section,
   .split-section {
     grid-template-columns: 1fr;
