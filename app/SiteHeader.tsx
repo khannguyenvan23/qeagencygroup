@@ -19,6 +19,7 @@ export function SiteHeader() {
           <Link href="/about">Về QEAgency</Link>
           <Link className="has-menu" href="/services">Dịch vụ</Link>
           <Link className="has-menu" href="/insights">Insights</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/work">Dự án</Link>
           <Link className="has-menu" href="/partners">Đối tác</Link>
           <Link href="/careers">Nghề nghiệp</Link>
@@ -40,6 +41,7 @@ export function SiteHeader() {
             <Link href="/about">Về QEAgency</Link>
             <Link href="/services">Dịch vụ</Link>
             <Link href="/insights">Insights</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/work">Dự án</Link>
             <Link href="/partners">Đối tác</Link>
             <Link href="/careers">Nghề nghiệp</Link>

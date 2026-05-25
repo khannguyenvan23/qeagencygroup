@@ -5,6 +5,7 @@ import { HeroFunnel } from "./HeroFunnel";
 import { MotionLayer } from "./MotionLayer";
 import { PainTabs } from "./PainTabs";
 import { SiteHeader } from "./SiteHeader";
+import { insights } from "./data/site";
 
 const painPoints = [
   {
@@ -178,6 +179,27 @@ const reasons = [
     title: "Đội ngũ hybrid thực chiến",
     text: "Kết hợp sự nhạy bén của marketer, tư duy logic của kỹ sư lập trình và thẩm mỹ của nhà thiết kế UX/UI.",
   },
+];
+
+const partnerLogos = [
+  { src: "/img/du-an/1.png", alt: "Partner logo 1" },
+  { src: "/img/du-an/2-e1749031011979.png", alt: "Partner logo 2" },
+  { src: "/img/du-an/belgo--e1748583934625.png", alt: "Belgo" },
+  { src: "/img/du-an/BigC-e1748584029299.jpg", alt: "Big C" },
+  { src: "/img/du-an/british-couuncil--300x300.png", alt: "British Council" },
+  { src: "/img/du-an/shiseido-logo-300x300.png", alt: "Shiseido" },
+  { src: "/img/du-an/tan-cang-.png", alt: "Tan Cang" },
+  { src: "/img/du-an/5.png", alt: "Partner logo 5" },
+  { src: "/img/du-an/6.png", alt: "Partner logo 6" },
+  { src: "/img/du-an/7.png", alt: "Partner logo 7" },
+  { src: "/img/du-an/8.png", alt: "Partner logo 8" },
+  { src: "/img/du-an/9.png", alt: "Partner logo 9" },
+  { src: "/img/du-an/10.png", alt: "Partner logo 10" },
+  { src: "/img/du-an/11.png", alt: "Partner logo 11" },
+  { src: "/img/du-an/12.png", alt: "Partner logo 12" },
+  { src: "/img/du-an/13.png", alt: "Partner logo 13" },
+  { src: "/img/du-an/14.png", alt: "Partner logo 14" },
+  { src: "/img/du-an/15.png", alt: "Partner logo 15" },
 ];
 
 export default function Home() {
@@ -372,45 +394,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta" id="contact" data-reveal="up">
-        <div>
-          <p className="eyebrow">Final CTA</p>
-          <h2>Nhận tư vấn chiến lược phễu cho doanh nghiệp của bạn.</h2>
+      <section className="partner-slider-section" aria-label="Đối tác" data-reveal="up">
+        <div className="partner-heading">
+          <p className="eyebrow">Partner network</p>
+          <h2>Partner Network</h2>
           <p>
-            Gửi thông tin dự án, đội ngũ QEAgency sẽ phản hồi với hướng
-            tiếp cận ban đầu cho phễu tăng trưởng của bạn.
+            A growing ecosystem of clients and brands across communications,
+            technology and digital growth projects.
           </p>
         </div>
-        <form className="lead-form">
-          <label>
-            Họ và tên
-            <input type="text" name="name" placeholder="Nguyễn Văn A" />
-          </label>
-          <label>
-            Email công việc
-            <input type="email" name="email" placeholder="you@company.com" />
-          </label>
-          <label>
-            Nhu cầu chính
-            <select name="need" defaultValue="">
-              <option value="" disabled>
-                Chọn một mục tiêu
-              </option>
-              <option>Nhiều lead hơn</option>
-              <option>Landing page chuyển đổi tốt hơn</option>
-              <option>Quảng cáo hiệu quả hơn</option>
-              <option>Xây dựng thương hiệu</option>
-              <option>KOL/KOC activation</option>
-            </select>
-          </label>
-          <label>
-            Mô tả ngắn
-            <textarea name="message" placeholder="Bạn đang muốn cải thiện điều gì?" />
-          </label>
-          <button type="submit">Gửi yêu cầu tư vấn</button>
-        </form>
+        <div className="partner-slider" aria-label="Logo đối tác tự động chạy">
+          <div className="partner-track">
+            {[...partnerLogos, ...partnerLogos].map((logoItem, index) => (
+              <div className="partner-logo-card" key={`${logoItem.src}-${index}`}>
+                <img src={logoItem.src} alt={logoItem.alt} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
+      <section className="expert-articles-section" aria-label="Bài viết chuyên môn">
+        <div className="section-heading" data-reveal="up">
+          <p className="eyebrow">Professional blog</p>
+          <h2>Professional Articles from QEAgency.</h2>
+        </div>
+        <div className="expert-article-grid">
+          {insights.map((post, index) => (
+            <a
+              className="expert-article-card"
+              data-reveal="up"
+              href={`/blog/${post.slug}`}
+              key={post.slug}
+              style={{ "--delay": `${index * 90}ms` } as CSSProperties}
+            >
+              <div className="expert-article-image">
+                <img src={post.image} alt={post.title} loading="lazy" />
+              </div>
+              <div className="expert-article-copy">
+                <span>{post.category}</span>
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
       <footer className="footer">
         <div className="footer-brand">
           <Image
@@ -438,4 +467,6 @@ export default function Home() {
     </main>
   );
 }
+
+
 

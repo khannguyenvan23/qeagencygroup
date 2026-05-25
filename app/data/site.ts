@@ -67,18 +67,21 @@ export const insights = [
     category: "Strategy",
     title: "Vì sao marketing nên bắt đầu từ phễu, không phải kênh?",
     excerpt: "Cách nhìn funnel-first giúp doanh nghiệp tránh lãng phí ngân sách media.",
+    image: "/img/du-an/BigC-e1748584029299.jpg",
   },
   {
     slug: "landing-page-conversion",
     category: "Conversion",
     title: "Landing page chuyển đổi tốt cần đo những chỉ số nào?",
     excerpt: "Từ Core Web Vitals đến form completion rate và lead quality.",
+    image: "/img/du-an/shiseido-logo-300x300.png",
   },
   {
     slug: "paid-ads-roi",
     category: "Advertising",
     title: "Tối ưu ROI quảng cáo: khi nào nên scale ngân sách?",
     excerpt: "Các tín hiệu vận hành giúp quyết định tăng ngân sách an toàn hơn.",
+    image: "/img/du-an/tan-cang-.png",
   },
 ];
 
