@@ -1,4 +1,6 @@
 import type { CSSProperties } from "react";
+import Image from "next/image";
+import logo from "../logo-01-main-transparent.png";
 import { MotionLayer } from "./MotionLayer";
 import { PainTabs } from "./PainTabs";
 
@@ -180,21 +182,65 @@ export default function Home() {
   return (
     <main>
       <MotionLayer />
-      <header className="site-header">
+      <header
+        className="site-header"
+        style={{ background: "#fff", paddingBlock: 10 }}
+      >
         <a className="brand" href="#top" aria-label="QEAgencygroup home">
-          QEAgencygroup
+          <Image
+            src={logo}
+            alt="QEAgencygroup"
+            className="brand-logo"
+            priority
+            style={{ width: 76, height: 76 }}
+          />
         </a>
         <nav className="nav-links" aria-label="Main navigation">
+          <a href="#about">Về QEAgency</a>
           <a href="#solutions">Giải pháp</a>
           <a href="#services">Dịch vụ</a>
           <a href="#process">Quy trình</a>
           <a href="#work">Dự án</a>
           <a href="#contact">Liên hệ</a>
         </nav>
-        <a className="header-cta" href="#contact">
-          Nhận tư vấn
-        </a>
+        <details className="mobile-menu">
+          <summary aria-label="Mở menu">
+            <span />
+            <span />
+            <span />
+          </summary>
+          <nav aria-label="Mobile menu">
+            <a href="#about">Về QEAgency</a>
+            <a href="#solutions">Giải pháp</a>
+            <a href="#services">Dịch vụ</a>
+            <a href="#process">Quy trình</a>
+            <a href="#work">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+          </nav>
+        </details>
       </header>
+      <nav className="mobile-tab-bar" aria-label="Mobile navigation">
+        <a href="#top">
+          <span className="tab-icon">H</span>
+          <span>Home</span>
+        </a>
+        <a href="#about">
+          <span className="tab-icon">QE</span>
+          <span>Về</span>
+        </a>
+        <a href="#solutions">
+          <span className="tab-icon">GP</span>
+          <span>Giải pháp</span>
+        </a>
+        <a href="#services">
+          <span className="tab-icon">DV</span>
+          <span>Dịch vụ</span>
+        </a>
+        <a href="#contact">
+          <span className="tab-icon">LH</span>
+          <span>Liên hệ</span>
+        </a>
+      </nav>
 
       <section className="hero" id="top">
         <div className="hero-content" data-reveal="left">
@@ -269,6 +315,34 @@ export default function Home() {
             {item}
           </span>
         ))}
+      </section>
+
+      <section className="section about-section" id="about">
+        <div className="about-copy" data-reveal="left">
+          <p className="eyebrow">About QEAgency</p>
+          <h2>Đối tác tăng trưởng kết hợp chiến lược, sáng tạo và công nghệ.</h2>
+          <p>
+            QEAgencygroup đồng hành cùng doanh nghiệp trong toàn bộ hành trình tăng
+            trưởng số: từ định vị vấn đề kinh doanh, xây dựng tài sản marketing,
+            triển khai công nghệ, đến tối ưu quảng cáo và chuyển đổi. Mỗi giải pháp
+            được thiết kế để tạo ra kết quả đo lường được, không chỉ dừng ở hình ảnh
+            đẹp hay lượt hiển thị.
+          </p>
+        </div>
+        <div className="about-stats" data-reveal="right" aria-label="QEAgency strengths">
+          <div>
+            <strong>Hybrid</strong>
+            <span>Marketing, design, tech và ads trong một hệ vận hành.</span>
+          </div>
+          <div>
+            <strong>Funnel-first</strong>
+            <span>Tập trung vào lead, chuyển đổi và ROI thực tế.</span>
+          </div>
+          <div>
+            <strong>Realtime</strong>
+            <span>Đo lường, học hỏi và tối ưu liên tục sau khi triển khai.</span>
+          </div>
+        </div>
       </section>
 
       <section className="section solutions-section" id="solutions">
