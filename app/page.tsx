@@ -182,42 +182,49 @@ export default function Home() {
   return (
     <main>
       <MotionLayer />
-      <header
-        className="site-header"
-        style={{ background: "#fff", paddingBlock: 10 }}
-      >
-        <a className="brand" href="#top" aria-label="QEAgencygroup home">
-          <Image
-            src={logo}
-            alt="QEAgencygroup"
-            className="brand-logo"
-            priority
-            style={{ width: 76, height: 76 }}
-          />
-        </a>
-        <nav className="nav-links" aria-label="Main navigation">
-          <a href="#about">Về QEAgency</a>
-          <a href="#solutions">Giải pháp</a>
-          <a href="#services">Dịch vụ</a>
-          <a href="#process">Quy trình</a>
-          <a href="#work">Dự án</a>
-          <a href="#contact">Liên hệ</a>
-        </nav>
-        <details className="mobile-menu">
-          <summary aria-label="Mở menu">
-            <span />
-            <span />
-            <span />
-          </summary>
-          <nav aria-label="Mobile menu">
+      <header className="site-header">
+        <div className="header-inner">
+          <a className="brand" href="#top" aria-label="QEAgencygroup home">
+            <Image
+              src={logo}
+              alt="QEAgencygroup"
+              className="brand-logo"
+              priority
+              style={{ width: 92, height: 92 }}
+            />
+          </a>
+          <nav className="nav-links" aria-label="Main navigation">
             <a href="#about">Về QEAgency</a>
-            <a href="#solutions">Giải pháp</a>
-            <a href="#services">Dịch vụ</a>
-            <a href="#process">Quy trình</a>
+            <a className="has-menu" href="#solutions">Giải pháp</a>
+            <a className="has-menu" href="#services">Kiến thức</a>
             <a href="#work">Dự án</a>
+            <a className="has-menu" href="#process">Academy</a>
+            <a href="#services">Nghề nghiệp</a>
             <a href="#contact">Liên hệ</a>
           </nav>
-        </details>
+          <div className="header-actions" aria-label="Header actions">
+            <a className="search-link" href="#contact" aria-label="Tìm kiếm" />
+            <a className="language-link" href="#top" aria-label="English">
+              EN
+            </a>
+          </div>
+          <details className="mobile-menu">
+            <summary aria-label="Mở menu">
+              <span />
+              <span />
+              <span />
+            </summary>
+            <nav aria-label="Mobile menu">
+              <a href="#about">Về QEAgency</a>
+              <a href="#solutions">Giải pháp</a>
+              <a href="#services">Kiến thức</a>
+              <a href="#work">Dự án</a>
+              <a href="#process">Academy</a>
+              <a href="#services">Nghề nghiệp</a>
+              <a href="#contact">Liên hệ</a>
+            </nav>
+          </details>
+        </div>
       </header>
       <nav className="mobile-tab-bar" aria-label="Mobile navigation">
         <a href="#top">
