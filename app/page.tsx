@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import logo from "../logo-01-main-transparent.png";
+import { HeroFunnel } from "./HeroFunnel";
 import { MotionLayer } from "./MotionLayer";
 import { PainTabs } from "./PainTabs";
 
@@ -184,23 +185,23 @@ export default function Home() {
       <MotionLayer />
       <header className="site-header">
         <div className="header-inner">
-          <a className="brand" href="#top" aria-label="QEAgencygroup home">
+          <a className="brand" href="#top" aria-label="QEAgency home">
             <Image
               src={logo}
-              alt="QEAgencygroup"
+              alt="QEAgency"
               className="brand-logo"
               priority
               style={{ width: 92, height: 92 }}
             />
           </a>
           <nav className="nav-links" aria-label="Main navigation">
-            <a href="#about">Về QEAgency</a>
+            <a href="/about">Về QEAgency</a>
             <a className="has-menu" href="#solutions">Giải pháp</a>
             <a className="has-menu" href="#services">Kiến thức</a>
             <a href="#work">Dự án</a>
             <a className="has-menu" href="#process">Academy</a>
             <a href="#services">Nghề nghiệp</a>
-            <a href="#contact">Liên hệ</a>
+            <a href="/contact">Liên hệ</a>
           </nav>
           <div className="header-actions" aria-label="Header actions">
             <a className="search-link" href="#contact" aria-label="Tìm kiếm" />
@@ -215,13 +216,13 @@ export default function Home() {
               <span />
             </summary>
             <nav aria-label="Mobile menu">
-              <a href="#about">Về QEAgency</a>
+              <a href="/about">Về QEAgency</a>
               <a href="#solutions">Giải pháp</a>
               <a href="#services">Kiến thức</a>
               <a href="#work">Dự án</a>
               <a href="#process">Academy</a>
               <a href="#services">Nghề nghiệp</a>
-              <a href="#contact">Liên hệ</a>
+              <a href="/contact">Liên hệ</a>
             </nav>
           </details>
         </div>
@@ -231,7 +232,7 @@ export default function Home() {
           <span className="tab-icon">H</span>
           <span>Home</span>
         </a>
-        <a href="#about">
+        <a href="/about">
           <span className="tab-icon">QE</span>
           <span>Về</span>
         </a>
@@ -243,7 +244,7 @@ export default function Home() {
           <span className="tab-icon">DV</span>
           <span>Dịch vụ</span>
         </a>
-        <a href="#contact">
+        <a href="/contact">
           <span className="tab-icon">LH</span>
           <span>Liên hệ</span>
         </a>
@@ -257,7 +258,7 @@ export default function Home() {
             <span className="accent-text">quảng cáo.</span>
           </h1>
           <p className="hero-copy">
-            QEAgencygroup thiết lập hệ thống tăng trưởng toàn diện bằng cách hợp
+            QEAgency thiết lập hệ thống tăng trưởng toàn diện bằng cách hợp
             nhất chiến lược, nội dung, thiết kế, công nghệ và quảng cáo hiệu
             suất. Chúng tôi tối ưu hóa toàn bộ phễu chuyển đổi để tạo ra kết
             quả kinh doanh thực tế, thay vì các chỉ số bề mặt.
@@ -272,37 +273,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          className="hero-panel funnel-panel"
-          aria-label="Marketing funnel snapshot"
-          data-reveal="right"
-        >
-          <div className="panel-top">
-            <span>Marketing x Tech System</span>
-            <strong>Realtime</strong>
-          </div>
-          <div className="funnel-stack">
-            <span>Strategy</span>
-            <span>Assets</span>
-            <span>Traffic</span>
-            <span>Conversion</span>
-            <span>ROI</span>
-          </div>
-          <div className="metric-grid">
-            <div>
-              <strong>07</strong>
-              <span>Nhóm năng lực cốt lõi</span>
-            </div>
-            <div>
-              <strong>5</strong>
-              <span>Bước vận hành tăng trưởng</span>
-            </div>
-          </div>
-          <div className="signal-card">
-            <span className="pulse" />
-            Mỗi chiến dịch được đo lường, học hỏi và tối ưu liên tục.
-          </div>
-        </div>
+        <HeroFunnel />
       </section>
 
       <section className="logo-band" aria-label="Capabilities" data-reveal="up">
@@ -329,7 +300,7 @@ export default function Home() {
           <p className="eyebrow">About QEAgency</p>
           <h2>Đối tác tăng trưởng kết hợp chiến lược, sáng tạo và công nghệ.</h2>
           <p>
-            QEAgencygroup đồng hành cùng doanh nghiệp trong toàn bộ hành trình tăng
+            QEAgency đồng hành cùng doanh nghiệp trong toàn bộ hành trình tăng
             trưởng số: từ định vị vấn đề kinh doanh, xây dựng tài sản marketing,
             triển khai công nghệ, đến tối ưu quảng cáo và chuyển đổi. Mỗi giải pháp
             được thiết kế để tạo ra kết quả đo lường được, không chỉ dừng ở hình ảnh
@@ -446,7 +417,7 @@ export default function Home() {
 
       <section className="section why-section">
         <div className="section-heading" data-reveal="up">
-          <p className="eyebrow">Why QEAgencygroup</p>
+          <p className="eyebrow">Why QEAgency</p>
           <h2>Ba lý do giúp khách hàng chọn một đối tác hybrid.</h2>
         </div>
         <div className="reason-grid">
@@ -470,7 +441,7 @@ export default function Home() {
           <p className="eyebrow">Final CTA</p>
           <h2>Nhận tư vấn chiến lược phễu cho doanh nghiệp của bạn.</h2>
           <p>
-            Gửi thông tin dự án, đội ngũ QEAgencygroup sẽ phản hồi với hướng
+            Gửi thông tin dự án, đội ngũ QEAgency sẽ phản hồi với hướng
             tiếp cận ban đầu cho phễu tăng trưởng của bạn.
           </p>
         </div>
@@ -508,11 +479,11 @@ export default function Home() {
         <div className="footer-brand">
           <Image
             src={logo}
-            alt="QEAgencygroup"
+            alt="QEAgency"
             className="footer-logo"
           />
           <div>
-            <strong>QEAgencygroup</strong>
+            <strong>QEAgency</strong>
             <span>Digital Growth Partner</span>
           </div>
         </div>

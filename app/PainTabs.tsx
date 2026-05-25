@@ -38,7 +38,7 @@ export function PainTabs({ items }: { items: PainItem[] }) {
         id={`pain-panel-${current.id}`}
         role="tabpanel"
       >
-        <p className="panel-kicker">Giải pháp của QEAgencygroup</p>
+        <p className="panel-kicker">Giải pháp của QEAgency</p>
         <h3>{current.pain}</h3>
         <p>{current.solution}</p>
         <div>

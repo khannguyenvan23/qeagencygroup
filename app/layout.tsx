@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "QEAgencygroup | Digital Growth Agency",
+  title: "QEAgency | Digital Growth Agency",
   description:
-    "QEAgencygroup helps brands grow through strategy, content, design, technology, advertising and KOL/KOC campaigns.",
+    "QEAgency helps brands grow through strategy, content, design, technology, advertising and KOL/KOC campaigns.",
 };
 
 export default function RootLayout({
