@@ -1,9 +1,26 @@
 import { notFound } from "next/navigation";
 import { CorporatePage } from "../../CorporatePage";
 import { jobs } from "../../data/site";
+import { createMetadata } from "../../seo";
 
 export function generateStaticParams() {
   return jobs.map((job) => ({ slug: job.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const job = jobs.find((item) => item.slug === slug);
+  if (!job) return {};
+
+  return createMetadata({
+    title: `${job.title} - Tuyển dụng`,
+    description: `Ứng tuyển vị trí ${job.title} tại QEAgency. Địa điểm: ${job.location}. Hình thức: ${job.type}.`,
+    path: `/careers/${job.slug}`,
+  });
 }
 
 export default async function CareerDetailPage({

@@ -1,5 +1,13 @@
 import { CorporatePage } from "../CorporatePage";
 import { partners } from "../data/site";
+import { createMetadata } from "../seo";
+
+export const metadata = createMetadata({
+  title: "Đối tác",
+  description:
+    "Hệ sinh thái đối tác, nền tảng và năng lực hỗ trợ QEAgency triển khai các dự án B2B quy mô lớn.",
+  path: "/partners",
+});
 
 export default function PartnersPage() {
   return (

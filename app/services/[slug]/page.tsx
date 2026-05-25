@@ -1,9 +1,26 @@
 import { notFound } from "next/navigation";
 import { CorporatePage } from "../../CorporatePage";
 import { services } from "../../data/site";
+import { createMetadata } from "../../seo";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
+  if (!service) return {};
+
+  return createMetadata({
+    title: service.title,
+    description: service.text,
+    path: `/services/${service.slug}`,
+  });
 }
 
 export default async function ServiceDetailPage({

@@ -6,6 +6,14 @@ import { MotionLayer } from "./MotionLayer";
 import { PainTabs } from "./PainTabs";
 import { SiteHeader } from "./SiteHeader";
 import { insights } from "./data/site";
+import { createMetadata } from "./seo";
+
+export const metadata = createMetadata({
+  title: "Đối tác tăng trưởng số",
+  description:
+    "QEAgency thiết lập hệ thống tăng trưởng toàn diện bằng chiến lược, nội dung, thiết kế, công nghệ và quảng cáo hiệu suất.",
+  path: "/",
+});
 
 const painPoints = [
   {

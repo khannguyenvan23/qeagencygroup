@@ -1,5 +1,13 @@
 import { CorporatePage } from "../CorporatePage";
 import { services } from "../data/site";
+import { createMetadata } from "../seo";
+
+export const metadata = createMetadata({
+  title: "Dịch vụ",
+  description:
+    "Hệ năng lực của QEAgency cho tăng trưởng toàn phễu: chiến lược, nội dung, thiết kế, công nghệ, quảng cáo và KOL/KOC.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

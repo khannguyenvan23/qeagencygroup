@@ -1,5 +1,13 @@
 import { CorporatePage } from "../CorporatePage";
 import { caseStudies } from "../data/site";
+import { createMetadata } from "../seo";
+
+export const metadata = createMetadata({
+  title: "Dự án",
+  description:
+    "Case studies của QEAgency theo vấn đề kinh doanh, giải pháp triển khai và kết quả tăng trưởng thực tế.",
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (

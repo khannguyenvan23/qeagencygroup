@@ -1,5 +1,13 @@
 import { SiteFooter } from "../SiteFooter";
 import { SiteHeader } from "../SiteHeader";
+import { createMetadata } from "../seo";
+
+export const metadata = createMetadata({
+  title: "Liên hệ",
+  description:
+    "Liên hệ QEAgency để trao đổi dự án tăng trưởng số, website, quảng cáo hiệu suất và chiến lược chuyển đổi.",
+  path: "/contact",
+});
 
 const stats = [
   {

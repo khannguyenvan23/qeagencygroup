@@ -1,5 +1,13 @@
 import { CorporatePage } from "../CorporatePage";
 import { jobs } from "../data/site";
+import { createMetadata } from "../seo";
+
+export const metadata = createMetadata({
+  title: "Nghề nghiệp",
+  description:
+    "Cơ hội nghề nghiệp tại QEAgency cho những người muốn xây dựng đội ngũ hybrid marketing, creative, technology và performance.",
+  path: "/careers",
+});
 
 export default function CareersPage() {
   return (

@@ -1,5 +1,13 @@
 import { CorporatePage } from "../CorporatePage";
 import { insights } from "../data/site";
+import { createMetadata } from "../seo";
+
+export const metadata = createMetadata({
+  title: "Kiến thức",
+  description:
+    "Góc nhìn, framework và kinh nghiệm vận hành tăng trưởng từ QEAgency cho marketing, công nghệ và chuyển đổi.",
+  path: "/insights",
+});
 
 export default function InsightsPage() {
   return (
