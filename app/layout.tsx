@@ -1,6 +1,29 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { createMetadata, organizationJsonLd } from "./seo";
 import "./globals.css";
+
+const lato = localFont({
+  src: [
+    {
+      path: "../brand-kit-QEAgency/Fonts/Lato-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../brand-kit-QEAgency/Fonts/Lato-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../brand-kit-QEAgency/Fonts/Lato-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-lato",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://qeagencygroup.com"),
@@ -31,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body>
+      <body className={lato.variable}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
