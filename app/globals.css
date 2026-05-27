@@ -8,7 +8,7 @@
   --lime: #d8ff45;
   --blue: #315dff;
   --coral: #ff6a4a;
-  --accent: #0046ff;
+  --accent: #0f6a4e;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -82,13 +82,6 @@
 
 .funnel-row:nth-child(5) {
   width: 60%;
-  color: var(--foreground);
-  background: var(--lime);
-}
-
-.funnel-row:nth-child(5) strong,
-.funnel-row:nth-child(5) small {
-  color: var(--foreground);
 }
 
 .solutions-section {
