@@ -25,6 +25,33 @@ const lato = localFont({
   display: "swap",
 });
 
+const josefinSans = localFont({
+  src: [
+    {
+      path: "../brand-kit-QEAgency/Fonts/JosefinSans-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../brand-kit-QEAgency/Fonts/JosefinSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../brand-kit-QEAgency/Fonts/JosefinSans-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../brand-kit-QEAgency/Fonts/JosefinSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-josefin",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://qeagencygroup.com"),
   ...createMetadata({
@@ -54,7 +81,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={lato.variable}>
+      <body className={`${lato.variable} ${josefinSans.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
