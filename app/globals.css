@@ -1103,19 +1103,19 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  padding: 18px clamp(20px, 6vw, 96px);
+  gap: 14px;
+  padding: 22px clamp(20px, 6vw, 96px);
   border-block: 1px solid var(--line);
   background: #fff;
 }
 
 .logo-band span {
-  padding: 9px 13px;
+  padding: 12px 18px;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 900;
   animation: chipFloat 4s ease-in-out infinite;
   animation-delay: var(--delay, 0ms);
   transition:
