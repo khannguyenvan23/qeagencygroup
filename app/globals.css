@@ -884,8 +884,8 @@ p {
 h1,
 h2,
 h3 {
-  font-family: var(--font-josefin), var(--font-lato), Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
+  font-weight: 900;
 }
 
 h1 {
