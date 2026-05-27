@@ -18,13 +18,19 @@ export const services = [
     text: "UX/UI, nhận diện thương hiệu, sales deck, brochure và hệ thống visual campaign.",
   },
   {
-    slug: "development",
+    slug: "video",
+    title: "Sản xuất video",
+    label: "Video",
+    text: "Video ngắn, video giới thiệu sản phẩm, motion graphics và nội dung quảng cáo tối ưu chuyển đổi.",
+  },
+  {
+    slug: "technology",
     title: "Phát triển nền tảng số",
     label: "Công nghệ",
     text: "Website, landing page, web app, tracking, CRM và hệ thống vận hành số.",
   },
   {
-    slug: "advertising",
+    slug: "performance-ads",
     title: "Quảng cáo hiệu suất",
     label: "Chuyển đổi",
     text: "Quản trị ngân sách, đo lường realtime, tối ưu ROI và tỷ lệ chuyển đổi.",

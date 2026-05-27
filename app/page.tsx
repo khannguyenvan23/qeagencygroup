@@ -1,5 +1,6 @@
 ﻿import type { CSSProperties } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../logo-01-main-transparent.png";
 import { HeroFunnel } from "./HeroFunnel";
 import { MotionLayer } from "./MotionLayer";
@@ -55,6 +56,7 @@ const painPoints = [
 
 const services = [
   {
+    slug: "strategy",
     title: "Chiến lược tăng trưởng số",
     label: "Bộ não chiến lược",
     items: [
@@ -64,6 +66,7 @@ const services = [
     ],
   },
   {
+    slug: "content",
     title: "Nội dung chuyển đổi",
     label: "Nội dung chuyển đổi",
     items: [
@@ -74,6 +77,7 @@ const services = [
     ],
   },
   {
+    slug: "design",
     title: "Thiết kế thương hiệu số",
     label: "Thiết kế định hướng kết quả",
     items: [
@@ -84,6 +88,7 @@ const services = [
     ],
   },
   {
+    slug: "video",
     title: "Sản xuất video",
     label: "Công cụ hỗ trợ acquisition",
     items: [
@@ -94,6 +99,7 @@ const services = [
     ],
   },
   {
+    slug: "technology",
     title: "Phát triển nền tảng số",
     label: "Nền tảng số thực chiến",
     items: [
@@ -103,6 +109,7 @@ const services = [
     ],
   },
   {
+    slug: "performance-ads",
     title: "Quảng cáo hiệu suất",
     label: "Quảng cáo hiệu suất",
     items: [
@@ -112,6 +119,7 @@ const services = [
     ],
   },
   {
+    slug: "kol-koc",
     title: "Booking KOL/KOC",
     label: "Khuếch đại truyền thông",
     items: [
@@ -304,9 +312,10 @@ export default function Home() {
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
-            <article
+            <Link
               className="service-card"
               data-reveal="up"
+              href={`/services/${service.slug}`}
               key={service.title}
               style={{ "--delay": `${index * 90}ms` } as CSSProperties}
             >
@@ -317,7 +326,7 @@ export default function Home() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
