@@ -161,11 +161,6 @@ export default function WorkPage() {
         <div className="work-section-heading">
           <p className="eyebrow">Khách hàng & đối tác</p>
           <h2>Những thương hiệu đã đồng hành cùng QEAgency.</h2>
-          <p>
-            Logo được trình bày như một hệ sinh thái dự án, giúp khách hàng mới
-            nhanh chóng nhận diện độ phủ ngành và năng lực triển khai đa nhóm thị
-            trường.
-          </p>
         </div>
         <div className="work-logo-grid">
           {projectLogos.map((logo) => (
