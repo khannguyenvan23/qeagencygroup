@@ -2284,9 +2284,9 @@ h1 {
 
 .work-logo-card {
   display: grid;
-  min-height: 132px;
+  min-height: 168px;
   place-items: center;
-  padding: 20px;
+  padding: 24px;
   background: #f7f8f4;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -2304,7 +2304,7 @@ h1 {
 
 .work-logo-card img {
   max-width: 100%;
-  max-height: 74px;
+  max-height: 108px;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
