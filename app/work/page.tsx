@@ -130,11 +130,6 @@ export default function WorkPage() {
         <div className="work-section-heading">
           <p className="eyebrow">Dự án nổi bật</p>
           <h2>Từ chiến lược đến triển khai, QE đồng hành trong từng điểm chạm.</h2>
-          <p>
-            Các dự án được chuyển thể từ portfolio cũ, trình bày lại theo hướng
-            rõ bối cảnh, vai trò triển khai và số liệu nổi bật để phù hợp với
-            website mới.
-          </p>
         </div>
         <div className="featured-work-grid">
           {featuredProjects.map((project) => (
