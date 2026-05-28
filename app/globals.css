@@ -656,11 +656,11 @@ a {
 
 .header-inner {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr) 100px;
+  grid-template-columns: 210px minmax(0, 1fr) 100px;
   align-items: center;
   gap: clamp(18px, 2.2vw, 36px);
   max-width: 1440px;
-  min-height: 92px;
+  min-height: 116px;
   margin: 0 auto;
   padding: 0 clamp(20px, 4vw, 54px);
 }
@@ -675,8 +675,8 @@ a {
 }
 
 .brand-logo {
-  width: 92px;
-  height: 92px;
+  width: 118px;
+  height: 118px;
   flex: 0 0 auto;
   object-fit: contain;
   object-position: center;
@@ -3468,7 +3468,7 @@ h1 {
   }
 
   .header-inner {
-    min-height: 86px;
+    min-height: 96px;
     padding-inline: 16px;
   }
 
@@ -3477,8 +3477,8 @@ h1 {
   }
 
   .brand-logo {
-    width: 76px !important;
-    height: 76px !important;
+    width: 88px !important;
+    height: 88px !important;
   }
 
   .header-cta {

@@ -23,7 +23,7 @@ export function SiteHeader() {
             alt="QEAgency"
             className="brand-logo"
             priority
-            style={{ width: 92, height: 92 }}
+            style={{ width: 118, height: 118 }}
           />
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
