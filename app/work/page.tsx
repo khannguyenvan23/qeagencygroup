@@ -170,10 +170,6 @@ export default function WorkPage() {
         <div className="work-section-heading">
           <p className="eyebrow">Case studies</p>
           <h2>Bằng chứng năng lực qua bài toán kinh doanh.</h2>
-          <p>
-            Mỗi case được mô tả theo ngành, vấn đề, hướng triển khai và chỉ số tác
-            động để phù hợp với pitching B2B.
-          </p>
         </div>
         <div className="work-case-grid">
           {caseStudies.map((item, index) => (

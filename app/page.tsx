@@ -418,10 +418,6 @@ export default function Home() {
       <section className="partner-slider-section" aria-label="Đối tác" data-reveal="up">
         <div className="partner-heading">
           <h2>Chuyên mục Đối tác</h2>
-          <p>
-            Hệ sinh thái khách hàng và thương hiệu đã đồng hành trong các dự án
-            truyền thông, công nghệ và tăng trưởng số.
-          </p>
         </div>
         <div className="partner-slider" aria-label="Logo đối tác tự động chạy">
           <div className="partner-track">
@@ -437,10 +433,6 @@ export default function Home() {
       <section className="expert-articles-section" aria-label="Bài viết chuyên môn">
         <div className="expert-articles-heading" data-reveal="up">
           <h2>Bài viết chuyên môn</h2>
-          <p>
-            Góc nhìn thực chiến từ đội ngũ QEAgency về chiến lược, chuyển đổi,
-            quảng cáo và vận hành tăng trưởng số.
-          </p>
         </div>
         <div className="expert-article-grid">
           {insights.map((post, index) => (
