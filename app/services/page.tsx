@@ -5,16 +5,16 @@ import { createMetadata } from "../seo";
 export const metadata = createMetadata({
   title: "Dịch vụ",
   description:
-    "Hệ năng lực của QEAgency cho tăng trưởng toàn phễu: chiến lược, nội dung, thiết kế, công nghệ, quảng cáo và KOL/KOC.",
+    "QEAgency là full stack agency hỗ trợ khách hàng trên toàn bộ phễu chuyển đổi hoặc bất kỳ giai đoạn nào trong quá trình tiếp cận khách hàng.",
   path: "/services",
 });
 
 export default function ServicesPage() {
   return (
     <CorporatePage
-      eyebrow="Services"
-      title="Hệ năng lực phục vụ tăng trưởng toàn phễu."
-      intro="QEAgency kết hợp chiến lược, nội dung, thiết kế, công nghệ và quảng cáo để vận hành tăng trưởng như một hệ thống."
+      eyebrow="Dịch vụ QEAgency"
+      title="Full stack agency hỗ trợ toàn bộ phễu chuyển đổi."
+      intro="QE Agency cung cấp dịch vụ toàn diện, hỗ trợ khách hàng trên toàn bộ conversion funnel hoặc bất kỳ giai đoạn nào trong quá trình tiếp cận khách hàng."
       cards={services.map((service) => ({
         href: `/services/${service.slug}`,
         kicker: service.label,
