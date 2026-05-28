@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import logo from "../logo-01-main-transparent.png";
 
-const navItems = [
+const viNavItems = [
   { href: "/about", label: "Về QEAgency" },
   { href: "/services", label: "Dịch vụ", hasMenu: true },
   { href: "/insights", label: "Kiến thức", hasMenu: true },
@@ -13,11 +16,46 @@ const navItems = [
   { href: "/contact", label: "Liên hệ" },
 ];
 
+const enNavItems = [
+  { href: "/about", label: "About QEAgency" },
+  { href: "/services", label: "Services", hasMenu: true },
+  { href: "/insights", label: "Insights", hasMenu: true },
+  { href: "/blog", label: "Blog" },
+  { href: "/work", label: "Work" },
+  { href: "/partners", label: "Partners", hasMenu: true },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
+];
+
+const toEnglishPath = (pathname: string) => {
+  if (pathname === "/en" || pathname.startsWith("/en/")) return pathname;
+  return pathname === "/" ? "/en" : `/en${pathname}`;
+};
+
+const toVietnamesePath = (pathname: string) => {
+  if (pathname === "/en") return "/";
+  if (pathname.startsWith("/en/")) return pathname.replace(/^\/en/, "") || "/";
+  return pathname || "/";
+};
+
+const localizeHref = (href: string, isEnglish: boolean) =>
+  isEnglish ? (href === "/" ? "/en" : `/en${href}`) : href;
+
 export function SiteHeader() {
+  const pathname = usePathname() || "/";
+  const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const navItems = isEnglish ? enNavItems : viNavItems;
+  const languageHref = isEnglish ? toVietnamesePath(pathname) : toEnglishPath(pathname);
+  const languageLabel = isEnglish ? "VI" : "EN";
+
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link className="brand" href="/" aria-label="QEAgency home">
+        <Link
+          className="brand"
+          href={isEnglish ? "/en" : "/"}
+          aria-label="QEAgency home"
+        >
           <Image
             src={logo}
             alt="QEAgency"
@@ -30,7 +68,7 @@ export function SiteHeader() {
           {navItems.map((item) => (
             <Link
               className={item.hasMenu ? "has-menu" : undefined}
-              href={item.href}
+              href={localizeHref(item.href, isEnglish)}
               key={item.href}
             >
               {item.label}
@@ -38,23 +76,32 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="header-actions" aria-label="Header actions">
-          <Link className="search-link" href="/blog" aria-label="Tìm bài viết" />
-          <Link className="language-link" href="/" aria-label="English">
-            EN
+          <Link
+            className="search-link"
+            href={localizeHref("/blog", isEnglish)}
+            aria-label={isEnglish ? "Search articles" : "Tìm bài viết"}
+          />
+          <Link
+            className="language-link"
+            href={languageHref}
+            aria-label={isEnglish ? "Chuyển sang tiếng Việt" : "Switch to English"}
+          >
+            {languageLabel}
           </Link>
         </div>
         <details className="mobile-menu">
-          <summary aria-label="Mở menu">
+          <summary aria-label={isEnglish ? "Open menu" : "Mở menu"}>
             <span />
             <span />
             <span />
           </summary>
           <nav aria-label="Mobile menu">
             {navItems.map((item) => (
-              <Link href={item.href} key={item.href}>
+              <Link href={localizeHref(item.href, isEnglish)} key={item.href}>
                 {item.label}
               </Link>
             ))}
+            <Link href={languageHref}>{languageLabel}</Link>
           </nav>
         </details>
       </div>
