@@ -40,6 +40,41 @@ const projectLogos = [
   { src: "/img/du-an/15.png", alt: "Đối tác QEAgency 15" },
 ];
 
+const featuredProjects = [
+  {
+    title: "Cosmose AI x OPPO",
+    sector: "Interactive media",
+    image:
+      "https://qeagencygroup.com/wp-content/uploads/2025/06/Screenshot-2025-06-10-at-13.24.34-1024x572.png",
+    text: "QE triển khai chiến dịch “Unlocking Minds Without Unlocking Screens” tại Indonesia, tạo trải nghiệm tương tác cá nhân hóa ngay trên màn hình khóa với game, tin tức, ngôn ngữ và meme.",
+    metrics: ["550 triệu lượt xem trang", "4 triệu lượt click", "0.75% CTR"],
+  },
+  {
+    title: "NNP Diamond Voice",
+    sector: "Entertainment",
+    image:
+      "https://qeagencygroup.com/wp-content/uploads/2025/06/Screenshot-2025-06-10-at-13.24.19-1024x575.png",
+    text: "QE đồng hành cùng Bong Dana Try tại Campuchia để xây dựng chương trình tìm kiếm giọng ca, truyền cảm hứng “You Can Do It, If You Believe It” và tạo sức lan tỏa trên mạng xã hội.",
+    metrics: ["95K lượt thích page", "129K lượt theo dõi page", "7.3M lượt xem video"],
+  },
+  {
+    title: "Skittles Việt Nam",
+    sector: "FMCG",
+    image:
+      "https://qeagencygroup.com/wp-content/uploads/2025/06/Screenshot-2025-06-10-at-13.24.49-1024x567.png",
+    text: "QE triển khai chiến dịch trải nghiệm vui nhộn, bắt mắt với hoạt động tương tác tìm quà, giúp thương hiệu kẹo cao cấp tiếp cận giới trẻ và tăng nhận diện.",
+    metrics: ["Brand activation", "Social engagement", "Youth audience"],
+  },
+  {
+    title: "Wave Tribe",
+    sector: "Music event",
+    image:
+      "https://qeagencygroup.com/wp-content/uploads/2025/06/Screenshot-2025-06-10-at-14.22.03-1024x569.png",
+    text: "QE đồng hành cùng Wave Tribe - Splash Pool Music Party trong chiến dịch quảng bá sự kiện âm nhạc, tạo sân chơi sôi động cho giới trẻ trên nhiều nền tảng.",
+    metrics: ["Event promotion", "Community engagement", "Multi-platform campaign"],
+  },
+];
+
 const proofPoints = [
   {
     value: "6+",
@@ -86,6 +121,37 @@ export default function WorkPage() {
             <article key={point.label}>
               <strong>{point.value}</strong>
               <span>{point.label}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="featured-work-section">
+        <div className="work-section-heading">
+          <p className="eyebrow">Dự án nổi bật</p>
+          <h2>Từ chiến lược đến triển khai, QE đồng hành trong từng điểm chạm.</h2>
+          <p>
+            Các dự án được chuyển thể từ portfolio cũ, trình bày lại theo hướng
+            rõ bối cảnh, vai trò triển khai và số liệu nổi bật để phù hợp với
+            website mới.
+          </p>
+        </div>
+        <div className="featured-work-grid">
+          {featuredProjects.map((project) => (
+            <article className="featured-work-card" key={project.title}>
+              <div className="featured-work-image">
+                <img src={project.image} alt={project.title} loading="lazy" />
+              </div>
+              <div className="featured-work-copy">
+                <span>{project.sector}</span>
+                <h3>{project.title}</h3>
+                <p>{project.text}</p>
+                <div>
+                  {project.metrics.map((metric) => (
+                    <strong key={metric}>{metric}</strong>
+                  ))}
+                </div>
+              </div>
             </article>
           ))}
         </div>

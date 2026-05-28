@@ -890,8 +890,8 @@ h3 {
 
 h1 {
   margin-bottom: 24px;
-  font-size: clamp(52px, 7vw, 104px);
-  line-height: 0.96;
+  font-size: clamp(42px, 5.8vw, 82px);
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -1789,8 +1789,8 @@ h1 {
 .contact-final h2 {
   max-width: 780px;
   margin-bottom: 18px;
-  font-size: clamp(42px, 6vw, 84px);
-  line-height: 0.98;
+  font-size: clamp(36px, 5vw, 70px);
+  line-height: 1;
 }
 
 .contact-hero em,
@@ -2006,8 +2006,8 @@ h1 {
 .contact-only-hero h1 {
   max-width: 880px;
   margin-bottom: 18px;
-  font-size: clamp(46px, 7vw, 92px);
-  line-height: 0.96;
+  font-size: clamp(40px, 5.6vw, 78px);
+  line-height: 1;
 }
 
 .contact-only-hero p:not(.contact-eyebrow) {
@@ -2091,8 +2091,8 @@ h1 {
 .corporate-hero h1 {
   max-width: 980px;
   margin-bottom: 20px;
-  font-size: clamp(46px, 7vw, 96px);
-  line-height: 0.96;
+  font-size: clamp(40px, 5.8vw, 80px);
+  line-height: 1;
 }
 
 .corporate-hero > p:not(.eyebrow) {
@@ -2164,6 +2164,7 @@ h1 {
 }
 
 .work-hero,
+.featured-work-section,
 .work-logo-section,
 .work-case-section,
 .work-cta {
@@ -2184,8 +2185,8 @@ h1 {
 .work-hero h1 {
   max-width: 1080px;
   margin-bottom: 22px;
-  font-size: clamp(52px, 7.4vw, 106px);
-  line-height: 0.94;
+  font-size: clamp(42px, 5.8vw, 84px);
+  line-height: 1;
 }
 
 .work-hero p:not(.eyebrow) {
@@ -2246,6 +2247,7 @@ h1 {
   font-weight: 800;
 }
 
+.featured-work-section,
 .work-logo-section,
 .work-case-section {
   padding-block: clamp(58px, 7vw, 94px);
@@ -2253,6 +2255,10 @@ h1 {
 
 .work-logo-section {
   background: #fff;
+}
+
+.featured-work-section {
+  background: #f7f8f4;
 }
 
 .work-section-heading {
@@ -2274,6 +2280,94 @@ h1 {
   margin: 0;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.featured-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.featured-work-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition:
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    transform 260ms var(--ease-out);
+}
+
+.featured-work-card:hover {
+  border-color: rgba(15, 106, 78, 0.28);
+  box-shadow: 0 24px 54px rgba(17, 23, 19, 0.1);
+  transform: translateY(-6px);
+}
+
+.featured-work-image {
+  display: grid;
+  aspect-ratio: 16 / 8.5;
+  place-items: center;
+  padding: 14px;
+  background:
+    linear-gradient(135deg, rgba(15, 106, 78, 0.1), transparent 42%),
+    #eef2ea;
+}
+
+.featured-work-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.featured-work-copy {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 26px;
+}
+
+.featured-work-copy span {
+  width: fit-content;
+  padding: 7px 10px;
+  color: var(--accent);
+  background: #edf6e7;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.featured-work-copy h3 {
+  margin: 0;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1;
+}
+
+.featured-work-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.featured-work-copy div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.featured-work-copy strong {
+  padding: 9px 11px;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  font-size: 12px;
 }
 
 .work-logo-grid {
@@ -2433,8 +2527,8 @@ h1 {
 .service-hero h1 {
   max-width: 980px;
   margin-bottom: 22px;
-  font-size: clamp(52px, 7.4vw, 106px);
-  line-height: 0.94;
+  font-size: clamp(42px, 5.8vw, 84px);
+  line-height: 1;
 }
 
 .service-hero p:not(.eyebrow) {
@@ -2609,8 +2703,8 @@ h1 {
 .blog-hero h1 {
   max-width: 920px;
   margin-bottom: 0;
-  font-size: clamp(48px, 7vw, 104px);
-  line-height: 0.95;
+  font-size: clamp(42px, 5.8vw, 82px);
+  line-height: 1;
 }
 
 .blog-hero > p {
@@ -2970,8 +3064,8 @@ h1 {
 .article-hero h1 {
   max-width: 960px;
   margin-bottom: 20px;
-  font-size: clamp(44px, 6.8vw, 94px);
-  line-height: 0.96;
+  font-size: clamp(38px, 5.6vw, 76px);
+  line-height: 1;
 }
 
 .article-hero-copy > p:not(.eyebrow) {
@@ -3491,6 +3585,7 @@ h1 {
   .process-section,
   .work-section,
   .work-hero,
+  .featured-work-section,
   .work-logo-section,
   .work-case-section,
   .work-cta,
@@ -3525,7 +3620,7 @@ h1 {
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .services-grid,
@@ -3600,6 +3695,7 @@ h1 {
   .expert-article-grid,
   .blog-grid,
   .article-related-grid,
+  .featured-work-grid,
   .work-case-grid,
   .service-process-grid,
   .service-deliverables-list,
